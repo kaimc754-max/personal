@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - MD Nishan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">MD Nishan</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">About Me</a>
+        <a href="gallery.html" class="nav-link">My Photos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Hi, I'm <span>MD Nishan</span> 👋</h2>
+        <p>
+          Hey guys! I’m a beginner developer, and this is my personal information website.
+          I’m learning step by step and building small projects to improve my skills.
+        </p>
+        <p>
+          Feel free to contact me if you want to connect, collaborate, or just say hi.
+          I’m always open to learning new things and meeting new people!
+        </p>
+      </div>
+      <div class="hero-image">
+        <!-- Replace profile.jpg with your own picture -->
+        <img src="images/profile.jpg" alt="Photo of MD Nishan" />
+      </div>
+    </section>
+
+    <section class="about">
+      <h3>About Me</h3>
+      <p>
+        I’m exploring programming and web development and using this site as a place to share
+        a bit about myself and my social media profiles. As I learn more, I’ll keep updating
+        this page and adding new projects and ideas.
+      </p>
+    </section>
+
+    <section class="social">
+      <h3>Find Me Online</h3>
+
+      <div class="social-links">
+
+        <!-- 1. TikTok: username + QR code -->
+        <div class="social-card">
+          <h4>TikTok</h4>
+          <p class="handle">
+            Username:
+            <a href="https://www.tiktok.com/@nishan.none?_r=1&_t=ZS-91cc3LnkVFg" target="_blank">
+              @nishan.none
+            </a>
+          </p>
+          <div class="qr-wrapper">
+            <!--
+              Save your TikTok QR code image as: images/tiktok-qr.png
+              and it will show here.
+            -->
+            <img src="images/tiktok-qr.png" alt="TikTok QR code for @nishan.none" />
+          </div>
+        </div>
+
+        <!-- 2. Facebook: small profile image + link -->
+        <div class="social-card">
+          <h4>Facebook</h4>
+          <a href="https://www.facebook.com/nonexdhere" target="_blank" class="fb-profile-link">
+            <img
+              src="images/facebook-profile.jpg"
+              alt="Facebook profile - MD Nishan"
+              class="fb-avatar"
+            />
+            <span>facebook.com/nonexdhere</span>
+          </a>
+        </div>
+
+        <!-- 3. Telegram: username -->
+        <div class="social-card">
+          <h4>Telegram</h4>
+          <p class="handle">
+            Username:
+            <a href="https://t.me/noneherexd" target="_blank">@noneherexd</a>
+          </p>
+        </div>
+
+        <!-- 4. Instagram: profile link -->
+        <div class="social-card">
+          <h4>Instagram</h4>
+          <a
+            href="https://www.instagram.com/nishanhere2?igsh=bDJ6b3Z4eXF4ZXE="
+            target="_blank"
+            class="insta-link"
+          >
+            instagram.com/nishanhere2
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MD Nishan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
