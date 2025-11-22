@@ -1,0 +1,261 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header / nav */
+.site-header {
+  background: #020617;
+  border-bottom: 1px solid #1f2933;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.nav-link:hover {
+  background: #1f2937;
+  color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Hero (About page top section) */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0 1.5rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-text h2 span {
+  color: #38bdf8;
+}
+
+.hero-text p {
+  color: #cbd5f5;
+  font-size: 0.98rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 999px;
+  border: 3px solid #1d4ed8;
+  display: block;
+  margin-left: auto;
+}
+
+/* About section */
+.about {
+  margin-top: 1rem;
+  padding: 1.5rem 1.2rem;
+  background: #020617;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+}
+
+.about h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.about p + p {
+  margin-top: 0.6rem;
+}
+
+/* Social links section */
+.social {
+  margin-top: 1.7rem;
+}
+
+.social h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Grid of cards for socials */
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+/* Card style for each social item */
+.social-card {
+  background: #020617;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+  padding: 0.9rem 1rem;
+}
+
+.social-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.handle a,
+.fb-profile-link span,
+.insta-link {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.handle a:hover,
+.fb-profile-link:hover span,
+.insta-link:hover {
+  text-decoration: underline;
+}
+
+/* TikTok QR image */
+.qr-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.qr-wrapper img {
+  width: 120px;
+  height: 120px;
+  border-radius: 0.75rem;
+  border: 1px solid #1e40af;
+}
+
+/* Facebook small profile image */
+.fb-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.fb-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid #1e40af;
+  flex-shrink: 0;
+}
+
+/* Gallery intro */
+.gallery-intro {
+  padding: 2rem 0 1rem;
+}
+
+.gallery-intro h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-item {
+  background: #020617;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.8);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #1f2933;
+  background: #020617;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}
