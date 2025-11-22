@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Photos - MD Nishan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">MD Nishan</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">About Me</a>
+        <a href="gallery.html" class="nav-link active">My Photos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="gallery-intro">
+      <h2>My Photo Gallery 📸</h2>
+      <p>
+        Here are some of my favorite pictures. You can replace these images with your
+        own files in the <code>images</code> folder.
+      </p>
+    </section>
+
+    <section class="gallery-grid">
+      <!-- Just duplicate these blocks and change the image src + alt for more photos -->
+      <div class="gallery-item">
+        <img src="images/photo1.jpg" alt="Photo 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo2.jpg" alt="Photo 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo3.jpg" alt="Photo 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo4.jpg" alt="Photo 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo5.jpg" alt="Photo 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo6.jpg" alt="Photo 6" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MD Nishan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
