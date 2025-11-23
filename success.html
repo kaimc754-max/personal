@@ -21,11 +21,17 @@
   </header>
 
   <main class="container fade-in">
-    <section class="about">
-      <h3>Thank You!</h3>
-      <p>Your message has been sent successfully. I’ll reply as soon as I can 😊</p>
-      <br />
-      <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    <section class="success-box">
+      <div class="success-icon">
+        <div class="success-circle">
+          <div class="success-check"></div>
+        </div>
+      </div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for contacting me. I’ve received your message and will reply soon.</p>
+      <button class="back-btn" onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+      </button>
     </section>
   </main>
 
@@ -42,6 +48,5 @@
       html.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
     }
   </script>
-
 </body>
 </html>
