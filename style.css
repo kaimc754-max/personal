@@ -320,6 +320,19 @@ main {
   font-size: 0.93rem;
 }
 
+.back-btn {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.back-btn:hover {
+  opacity: 0.9;
+}
+
 .social-card h4 {
   font-size: 0.98rem;
   margin-bottom: 0.3rem;
