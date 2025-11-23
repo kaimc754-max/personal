@@ -137,11 +137,17 @@
   <h3>Contact Me</h3>
   <form action="https://formsubmit.co/nonexdeww@gmail.com" method="POST" class="contact-form">
 
-    <!-- Redirect to your success page -->
+    <!-- After submit: go to animated success page -->
     <input type="hidden" name="_next" value="https://personal-iw3l.onrender.com/success.html">
 
-    <!-- Disable CAPTCHA -->
+    <!-- Disable captcha -->
     <input type="hidden" name="_captcha" value="false">
+
+    <!-- Subject line of the email YOU receive -->
+    <input type="hidden" name="_subject" value="New message from your personal website">
+
+    <!-- Auto-reply message sent to the visitor -->
+    <input type="hidden" name="_autoresponse" value="Hi! Thanks for contacting me via my website. I got your message and will reply as soon as I can. — MD Nishan">
 
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -150,7 +156,6 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
-
   </main>
 
   <!-- FOOTER -->
