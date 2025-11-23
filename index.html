@@ -135,12 +135,20 @@
     <!-- CONTACT FORM -->
     <section class="contact-box">
       <h3>Contact Me</h3>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button>Send</button>
-      </form>
+      <form action="https://formsubmit.co/nonexdeww@gmail.com" method="POST" class="contact-form">
+  
+  <!-- Redirect back to your site after sending -->
+  <input type="hidden" name="_next" value="https://personal-iw3l.onrender.com/index.html" />
+
+  <!-- Stop spam bots -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  
+  <button type="submit">Send Message</button>
+</form>
     </section>
 
   </main>
