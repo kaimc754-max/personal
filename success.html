@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent - MD Nishan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo custom-logo">MD <span>NISHAN</span></h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">About Me</a>
+        <a href="gallery.html" class="nav-link">My Photos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container fade-in">
+    <section class="about">
+      <h3>Thank You!</h3>
+      <p>Your message has been sent successfully. I’ll reply as soon as I can 😊</p>
+      <br />
+      <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> MD Nishan</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const theme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
+    }
+  </script>
+
+</body>
+</html>
