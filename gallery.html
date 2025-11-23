@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9YPTNHVPN"></script>
   <script>
@@ -10,15 +13,31 @@
     gtag('config', 'G-G9YPTNHVPN');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Photos - MD Nishan</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- INTRO -->
+  <div id="intro-screen">
+    <h1 class="intro-title">WELCOME</h1>
+    <p class="intro-sub">GALLERY LOADING…</p>
+  </div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading Photos...</p>
+  </div>
+
+  <!-- THEME BUTTON -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
-      <h1 class="logo">MD Nishan</h1>
+      <h1 class="logo custom-logo">MD <span>NISHAN</span></h1>
+
       <nav class="nav">
         <a href="index.html" class="nav-link">About Me</a>
         <a href="gallery.html" class="nav-link active">My Photos</a>
@@ -26,33 +45,46 @@
     </div>
   </header>
 
-  <main class="container">
+  <!-- GALLERY -->
+  <main class="container fade-in">
     <section class="gallery-intro">
-      <h2>My Photo Gallery 📸</h2>
-      <p>
-        Here are some of my favorite pictures.
-      </p>
+      <h2 class="glow-text">My Photo Gallery 📸</h2>
+      <p>Tap any image to zoom.</p>
     </section>
 
-    <section class="gallery-grid">
-      <!-- Just duplicate these blocks and change the image src + alt for more photos -->
-      <div class="gallery-item">
-        <img src="images/IMG_20251122_195739.jpg" alt="Photo 1" />
-      </div>
-      <div class="gallery-item">
-        <img src="images/1760107834761~2.jpg" alt="Photo 2" />
-      </div>
+    <section class="gallery-grid upgraded-gallery">
+
+      <div class="gallery-item zoom-img"><img src="images/IMG_20251122_195739.jpg"></div>
+      <div class="gallery-item zoom-img"><img src="images/1760107834761~2.jpg"></div>
+
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> MD Nishan. All rights reserved.</p>
-    </div>
+    <p>© <span id="year"></span> MD Nishan</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const cur = html.getAttribute("data-theme");
+    html.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  }
+
+  window.onload = () => {
+    setTimeout(() => {
+      document.getElementById("intro-screen").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("intro-screen").style.display = "none";
+        document.getElementById("loader").style.opacity = "0";
+        setTimeout(() => document.getElementById("loader").style.display = "none", 500);
+      }, 600);
+    }, 1100);
+  };
+</script>
+
 </body>
 </html>
