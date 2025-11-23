@@ -10,7 +10,6 @@ Built with **HTML, CSS & JavaScript** and hosted on **Render** 🚀
 [![Website Status](https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=google-chrome)](https://personal-iw3l.onrender.com/)
 [![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5)](#)
 [![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript)](#)
 
 </div>
 
