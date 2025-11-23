@@ -462,7 +462,97 @@ main {
 .zoom-img:hover img {
   transform: scale(1.12);
 }
+/* Success message box */
+.success-box {
+  margin-top: 2rem;
+  padding: 1.8rem 1.4rem;
+  background: var(--bg-card);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  text-align: center;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.success-box h3 {
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.success-box p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* Animated checkmark */
+.success-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.success-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pop-in 0.5s ease-out;
+  position: relative;
+}
+
+.success-check {
+  width: 28px;
+  height: 14px;
+  border-left: 4px solid #22c55e;
+  border-bottom: 4px solid #22c55e;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+  animation: draw-check 0.4s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes draw-check {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+/* Back button on success page (reusing your accent color) */
+.back-btn {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.back-btn:hover {
+  opacity: 0.9;
+}
 /* ========== FOOTER ========== */
 .site-footer {
   border-top: 1px solid var(--border);
