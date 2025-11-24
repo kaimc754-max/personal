@@ -184,6 +184,40 @@
     }, 1200);
   };
 </script>
+  <script>
+function openGalleryWithAd() {
+  // Create popup overlay
+  const adBox = document.createElement('div');
+  adBox.style.position = "fixed";
+  adBox.style.inset = "0";
+  adBox.style.background = "rgba(0,0,0,0.75)";
+  adBox.style.zIndex = "999999";
+  adBox.style.display = "flex";
+  adBox.style.justifyContent = "center";
+  adBox.style.alignItems = "center";
+  adBox.style.padding = "20px";
+
+  // Ad container
+  adBox.innerHTML = `
+    <div style="background:#fff; padding:20px; border-radius:12px; max-width:90%;">
+      <p style="text-align:center; color:#000; font-size:18px;">Loading Ad...</p>
+      <div id="adestraAd"></div>
+    </div>
+  `;
+  
+  document.body.appendChild(adBox);
+
+  // Insert ad script dynamically
+  const s = document.createElement("script");
+  s.src = "//pl28124996.effectivegatecpm.com/5a/f1/66/5af16647edab0f285bf2d0888f06b195.js";
+  document.getElementById("adestraAd").appendChild(s);
+
+  // After 3 seconds, go to gallery page
+  setTimeout(() => {
+    window.location.href = "gallery.html";
+  }, 3000);
+}
+  </script>
 
 </body>
 </html>
