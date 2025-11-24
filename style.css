@@ -106,7 +106,7 @@ a {
 
 /* For Chrome, Edge, Brave, Opera */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;   /* super thin */
 }
 
 ::-webkit-scrollbar-track {
