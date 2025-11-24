@@ -102,32 +102,22 @@ a {
     transform: rotate(360deg);
   }
 }
-/* ===== Custom Scrollbar ===== */
+/* ===== Fully Invisible Scrollbar ===== */
 
-/* For Chrome, Edge, Brave, Opera */
+/* Chrome, Edge, Brave, Opera */
 ::-webkit-scrollbar {
-  width: 4px;   /* super thin */
+  width: 0px;
+  height: 0px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-card);
-  border-left: 1px solid var(--border);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 10px;
-  border: 2px solid var(--bg-card);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #1d4ed8; /* darker blue on hover */
-}
-
-/* For Firefox */
+/* Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) var(--bg-card);
+  scrollbar-width: none;
+}
+
+/* For Firefox (extra hidden) */
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /* ========== HEADER & NAV ========== */
