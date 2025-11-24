@@ -102,6 +102,33 @@ a {
     transform: rotate(360deg);
   }
 }
+/* ===== Custom Scrollbar ===== */
+
+/* For Chrome, Edge, Brave, Opera */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+  border: 2px solid var(--bg-card);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8; /* darker blue on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg-card);
+}
 
 /* ========== HEADER & NAV ========== */
 .site-header {
