@@ -35,7 +35,7 @@ This repository contains the source code of my **personal information website**,
 
 Click below to visit my website:
 
-👉 http://nishannone.online/index.html
+👉 http://nishannone.online
 ---
 
 ## 📁 **Project Pages**
